@@ -1,4 +1,5 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables
+import 'package:bloco_de_notas/src/features/new_note/new_note_page.dart';
 import 'package:bloco_de_notas/src/shared/constants/app_images.dart';
 import 'package:flutter/material.dart';
 import 'package:bloco_de_notas/src/shared/constants/app_colors.dart';
@@ -107,6 +108,13 @@ class _HomePageState extends State<HomePage> {
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       floatingActionButton: InkWell(
+        onTap: () {
+          Navigator.of(context).push(
+            MaterialPageRoute(
+              builder: (BuildContext context) => const NewNotePage(),
+            ),
+          );
+        },
         child: Padding(
           padding: const EdgeInsets.only(bottom: 56.0),
           child: Container(
