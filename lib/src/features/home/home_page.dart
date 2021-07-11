@@ -1,7 +1,7 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables
+import 'package:flutter/material.dart';
 import 'package:bloco_de_notas/src/features/new_note/new_note_page.dart';
 import 'package:bloco_de_notas/src/shared/constants/app_images.dart';
-import 'package:flutter/material.dart';
 import 'package:bloco_de_notas/src/shared/constants/app_colors.dart';
 
 class HomePage extends StatefulWidget {
@@ -21,7 +21,7 @@ class _HomePageState extends State<HomePage> {
             top: true,
             child: Image.asset(
               AppImages.boy,
-              fit: BoxFit.fitHeight,
+              fit: BoxFit.scaleDown,
             ),
           ),
           Align(
@@ -34,20 +34,23 @@ class _HomePageState extends State<HomePage> {
                 Hero(
                   tag: "notes_logo",
                   child: Padding(
-                    padding: const EdgeInsets.only(top: 16.0),
+                    padding: const EdgeInsets.only(top: 16.0, right: 16.0),
                     child: Image.asset(AppImages.logoNotes),
                   ),
                 ),
                 const Hero(
                   tag: "journal",
-                  child: Text(
-                    "journal",
-                    style: TextStyle(
-                      fontSize: 48.0,
-                      fontWeight: FontWeight.w700,
-                      color: Colors.white,
-                      fontFamily: "Montserrat",
-                      letterSpacing: -0.05,
+                  child: Material(
+                    color: Colors.transparent,
+                    child: Text(
+                      "journal",
+                      style: TextStyle(
+                        fontSize: 48.0,
+                        fontWeight: FontWeight.w700,
+                        color: Colors.white,
+                        fontFamily: "Montserrat",
+                        letterSpacing: -0.05,
+                      ),
                     ),
                   ),
                 ),
@@ -74,18 +77,21 @@ class _HomePageState extends State<HomePage> {
                     bottom: 60.0,
                     left: 40.0,
                   ),
-                  child: Column(
+                  child: Flex(
+                    direction: Axis.vertical,
                     mainAxisSize: MainAxisSize.min,
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      const Text(
-                        "Não importa onde você esteja! Guarde suas ideias pra depois ;)",
-                        style: TextStyle(
-                          fontFamily: "Roboto",
-                          fontWeight: FontWeight.w400,
-                          fontSize: 24.0,
-                          color: AppColors.purple,
+                      const Flexible(
+                        child: Text(
+                          "Não importa onde você esteja! Guarde suas ideias pra depois ;)",
+                          style: TextStyle(
+                            fontFamily: "Roboto",
+                            fontWeight: FontWeight.w400,
+                            fontSize: 24.0,
+                            color: AppColors.purple,
+                          ),
                         ),
                       ),
                       const SizedBox(height: 24.0),
