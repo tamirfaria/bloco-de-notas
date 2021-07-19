@@ -1,4 +1,5 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables
+import 'package:bloco_de_notas/src/widgets/button_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:bloco_de_notas/src/features/new_note/new_note_page.dart';
 import 'package:bloco_de_notas/src/shared/constants/app_images.dart';
@@ -121,41 +122,7 @@ class _HomePageState extends State<HomePage> {
             ),
           );
         },
-        child: Padding(
-          padding: const EdgeInsets.only(bottom: 56.0),
-          child: Container(
-            height: 56.0,
-            width: 56.0,
-            decoration: BoxDecoration(
-              gradient: AppColors.blueGradient,
-              shape: BoxShape.circle,
-              boxShadow: [
-                BoxShadow(
-                  color: Colors.black.withOpacity(0.12),
-                  offset: const Offset(0.0, 1.0),
-                  blurRadius: 18.0,
-                ),
-                BoxShadow(
-                  color: Colors.black.withOpacity(0.14),
-                  offset: const Offset(0.0, 6.0),
-                  blurRadius: 10.0,
-                ),
-                BoxShadow(
-                  color: Colors.black.withOpacity(0.2),
-                  offset: const Offset(0.0, 3.0),
-                  blurRadius: 5.0,
-                  spreadRadius: -1.0,
-                ),
-              ],
-            ),
-            child: const Center(
-              child: Icon(
-                Icons.add,
-                color: Colors.white,
-              ),
-            ),
-          ),
-        ),
+        child: const ButtonWidget(),
       ),
     );
   }
