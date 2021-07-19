@@ -1,3 +1,4 @@
+import 'package:bloco_de_notas/src/features/all_notes/all_notes_page.dart';
 import 'package:flutter/material.dart';
 import 'package:bloco_de_notas/src/features/splash/splash_page.dart';
 
@@ -9,7 +10,7 @@ class AppWidget extends StatelessWidget {
     return const MaterialApp(
       title: 'Bloco de Notas | Raro Academy',
       debugShowCheckedModeBanner: false,
-      home: SplashPage(),
+      home: AllNotesPage(),
     );
   }
 }

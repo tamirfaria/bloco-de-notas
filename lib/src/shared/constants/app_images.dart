@@ -3,4 +3,6 @@ class AppImages {
   static const logoRaro = "assets/images/raro_academy_logo.png";
   static const boy = "assets/images/boy.png";
   static const journalNotesPage = "assets/images/journal_notes_page.png";
+  static const journalWhiteNotesPage =
+      "assets/images/journal_notes_page_white.png";
 }
